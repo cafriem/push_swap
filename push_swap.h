@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:31 by cafriem           #+#    #+#             */
-/*   Updated: 2022/10/31 15:47:39 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/10/31 16:20:14 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,9 @@ void	ss(t_stack *stack);
 void	ra(t_stack *stack);
 void	rb(t_stack *stack);
 void	rr(t_stack *stack);
+//
+void	rra(t_stack *stack);
+void	rrb(t_stack *stack);
+void	rrr(t_stack *stack);
 
 #endif
