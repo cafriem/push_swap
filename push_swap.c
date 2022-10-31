@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/10/25 17:08:20 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/10/31 15:48:15 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	init(t_stack *stack, char *argv[])
 {
-	int c;
+	int	c;
 
 	c = 0;
 	if (stack->size <= 1)
