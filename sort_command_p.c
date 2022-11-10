@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:33:14 by cafriem           #+#    #+#             */
-/*   Updated: 2022/10/31 17:35:58 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/10 13:30:07 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	pa(t_stack stack)
 	}
 	stack.astack[0] = num;
 	stack.max_a++;
-	write(1, "pa \n", 5);
+	write(1, "pa\n", 4);
 }
 
 void	pb(t_stack stack)
@@ -61,5 +61,5 @@ void	pb(t_stack stack)
 	}
 	stack.bstack[0] = num;
 	stack.max_b++;
-	write(1, "pb \n", 5);
+	write(1, "pb\n", 4);
 }
