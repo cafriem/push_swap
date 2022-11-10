@@ -12,65 +12,64 @@
 
 #include "push_swap.h"
 
-void	ra(t_stack *stack)
+void	ra(t_stack stack)
 {
 	int	num;
 	int	end;
 	int	c;
 
 	c = 1;
-	end = ft_endstack(stack->astack);
-	num = stack->astack[0];
+	end = stack.max_a;
+	num = stack.astack[0];
 	while (c != end)
 	{
-		stack->astack[c - 1] = stack->astack[c];
+		stack.astack[c - 1] = stack.astack[c];
 		c++;
 	}
-	stack->astack[c - 1] = num;
-	stack->astack[end] = NULL;
+	stack.astack[c - 1] = num;
+	write(1, "ra \n", 5);
 }
 
-void	rb(t_stack *stack)
+void	rb(t_stack stack)
 {
 	int	num;
 	int	end;
 	int	c;
 
 	c = 1;
-	end = ft_endstack(stack->bstack);
-	num = stack->bstack[0];
+	end = stack.max_b;
+	num = stack.bstack[0];
 	while (c != end)
 	{
-		stack->bstack[c - 1] = stack->bstack[c];
+		stack.bstack[c - 1] = stack.bstack[c];
 		c++;
 	}
-	stack->bstack[c - 1] = num;
-	stack->bstack[end] = NULL;
+	stack.bstack[c - 1] = num;
+	write(1, "rb \n", 5);
 }
 
-void	rr(t_stack *stack)
+void	rr(t_stack stack)
 {
 	int	num;
 	int	end;
 	int	c;
 
 	c = 1;
-	end = ft_endstack(stack->astack);
-	num = stack->astack[0];
+	end = stack.max_a;
+	num = stack.astack[0];
 	while (c != end)
 	{
-		stack->astack[c - 1] = stack->astack[c];
+		stack.astack[c - 1] = stack.astack[c];
 		c++;
 	}
-	stack->astack[c - 1] = num;
-	stack->astack[end] = NULL;
+	stack.astack[c - 1] = num;
 	c = 1;
-	num = stack->bstack[0];
+	num = stack.bstack[0];
 	while (c != end)
 	{
-		stack->bstack[c - 1] = stack->bstack[c];
+		stack.bstack[c - 1] = stack.bstack[c];
 		c++;
 	}
-	stack->bstack[c - 1] = num;
-	stack->bstack[end] = NULL;
+	stack.bstack[c - 1] = num;
+	write(1, "rr \n", 5);
 }

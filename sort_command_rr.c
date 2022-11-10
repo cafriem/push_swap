@@ -12,59 +12,58 @@
 
 #include "push_swap.h"
 
-void	rra(t_stack *stack)
+void	rra(t_stack stack)
 {
 	int	num;
 	int	c;
 
-	c = ft_endstack(stack->astack);
-	num = stack->astack[c];
+	c = stack.max_a;
+	num = stack.astack[c];
 	while (c != 0)
 	{
-		stack->astack[c] = stack->astack[c - 1];
+		stack.astack[c] = stack.astack[c - 1];
 		c--;
 	}
-	stack->astack[0] = num;
-	stack->astack[ft_endstack(stack->astack)] = 0;
+	stack.astack[0] = num;
+	write(1, "rra \n", 6);
 }
 
-void	rrb(t_stack *stack)
+void	rrb(t_stack stack)
 {
 	int	num;
 	int	c;
 
-	c = ft_endstack(stack->bstack);
-	num = stack->bstack[c];
+	c = stack.max_b;
+	num = stack.bstack[c];
 	while (c != 0)
 	{
-		stack->bstack[c] = stack->bstack[c - 1];
+		stack.bstack[c] = stack.bstack[c - 1];
 		c--;
 	}
-	stack->bstack[0] = num;
-	stack->bstack[ft_endstack(stack->bstack)] = 0;
+	stack.bstack[0] = num;
+	write(1, "rrb \n", 6);
 }
 
-void	rrr(t_stack *stack)
+void	rrr(t_stack stack)
 {
 	int	num;
 	int	c;
 
-	c = ft_endstack(stack->astack);
-	num = stack->astack[c];
+	c = stack.max_a;
+	num = stack.astack[c];
 	while (c != 0)
 	{
-		stack->astack[c] = stack->astack[c - 1];
+		stack.astack[c] = stack.astack[c - 1];
 		c--;
 	}
-	stack->astack[0] = num;
-	stack->astack[ft_endstack(stack->astack)] = 0;
-	c = ft_endstack(stack->bstack);
-	num = stack->bstack[c];
+	stack.astack[0] = num;
+	c = stack.max_b;
+	num = stack.bstack[c];
 	while (c != 0)
 	{
-		stack->bstack[c] = stack->bstack[c - 1];
+		stack.bstack[c] = stack.bstack[c - 1];
 		c--;
 	}
-	stack->bstack[0] = num;
-	stack->bstack[ft_endstack(stack->bstack)] = 0;
+	stack.bstack[0] = num;
+	write(1, "rrr \n", 6);
 }

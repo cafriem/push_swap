@@ -16,7 +16,6 @@ void	init(t_stack *stack, char *argv[])
 {
 	int	c;
 
-	c = 0;
 	if (stack->size <= 1)
 	{
 		write(1, "Error : Nothing to sort", 25);
@@ -24,23 +23,27 @@ void	init(t_stack *stack, char *argv[])
 	}
 	stack->astack = ft_calloc(stack->size + 1, sizeof(int));
 	stack->bstack = ft_calloc(stack->size + 1, sizeof(int));
-	while (c > stack->size)
+	c = 0;
+	while (c < stack->size)
 	{
 		stack->astack[c] = ft_atoi(argv[c]);
 		c++;
 	}
+	printf("%d %d %d", stack->astack[0], stack->astack[1], stack->astack[2]);
+	stack->max_b = 0;
+	stack->max_a = stack->size;
 }
 
 void	shortsort(t_stack *stack)
 {
 	if (stack->size == 2)
-		sorting2();
+		sort2(*stack);
 	if (stack->size == 3)
-		sorting3();
-	if (stack->size == 4)
-		sorting4();
-	if (stack->size == 5)
-		sorting5();
+		sort3(*stack);
+	// if (stack->size == 4)
+	// 	sort4();
+	// if (stack->size == 5)
+	// 	sort5();
 }
 
 int	main(int argc, char *argv[])
@@ -51,6 +54,4 @@ int	main(int argc, char *argv[])
 	init(&stack, argv);
 	if (argc >= 2 && argc <= 5)
 		shortsort(&stack);
-	//
-	sa(&stack);
 }

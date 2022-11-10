@@ -26,25 +26,32 @@ typedef struct p_stack
 	int	*astack;
 	int	*bstack;
 	int	size;
+	int	a_size;
+	int	b_size;
+	int	max_a;
+	int	max_b;
 }	t_stack;
 
 int		main(int argc, char *argv[]);
 void	init(t_stack *stack, char *argv[]);
+//
 void	shortsort(t_stack *stack);
+void	sort2(t_stack stack);
+void	sort3(t_stack stack);
 //
-void	sa(stack_t *stack);
-void	sb(t_stack *stack);
-void	ss(t_stack *stack);
+void	sa(t_stack stack);
+void	sb(t_stack stack);
+void	ss(t_stack stack);
 //
-void	ra(t_stack *stack);
-void	rb(t_stack *stack);
-void	rr(t_stack *stack);
+void	ra(t_stack stack);
+void	rb(t_stack stack);
+void	rr(t_stack stack);
 //
-void	rra(t_stack *stack);
-void	rrb(t_stack *stack);
-void	rrr(t_stack *stack);
+void	rra(t_stack stack);
+void	rrb(t_stack stack);
+void	rrr(t_stack stack);
 //
-void	pa(t_stack *stack);
-void	pb(t_stack *stack);
+void	pa(t_stack stack);
+void	pb(t_stack stack);
 
 #endif

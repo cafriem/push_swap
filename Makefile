@@ -5,9 +5,11 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 SRCS =	push_swap.c			\
-		push_command_s.c	\
-		push_command_r.c	\
-		push_command_rr.c	
+		push_swapshort.c	\
+		sort_command_p.c	\
+		sort_command_r.c	\
+		sort_command_rr.c	\
+		sort_command_s.c
 
 OBJS = $(SRCS:.c=.o)
 

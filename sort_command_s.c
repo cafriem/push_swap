@@ -12,32 +12,35 @@
 
 #include "push_swap.h"
 
-void	sa(t_stack *stack)
+void	sa(t_stack stack)
 {
 	int	num;
 
-	num = stack->astack[1];
-	stack->astack[1] = stack->astack[2];
-	stack->astack[2] = num;
+	num = stack.astack[1];
+	stack.astack[1] = stack.astack[2];
+	stack.astack[2] = num;
+	write(1, "sa \n", 5);
 }
 
-void	sb(t_stack *stack)
+void	sb(t_stack stack)
 {
 	int	num;
 
-	num = stack->bstack[1];
-	stack->bstack[1] = stack->bstack[2];
-	stack->bstack[2] = num;
+	num = stack.bstack[1];
+	stack.bstack[1] = stack.bstack[2];
+	stack.bstack[2] = num;
+	write(1, "sb \n", 5);
 }
 
-void	ss(t_stack *stack)
+void	ss(t_stack stack)
 {
 	int	num;
 
-	num = stack->astack[1];
-	stack->astack[1] = stack->astack[2];
-	stack->astack[2] = num;
-	num = stack->bstack[1];
-	stack->bstack[1] = stack->bstack[2];
-	stack->bstack[2] = num;
+	num = stack.astack[1];
+	stack.astack[1] = stack.astack[2];
+	stack.astack[2] = num;
+	num = stack.bstack[1];
+	stack.bstack[1] = stack.bstack[2];
+	stack.bstack[2] = num;
+	write(1, "ss \n", 5);
 }

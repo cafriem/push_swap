@@ -12,52 +12,54 @@
 
 #include "push_swap.h"
 
-void	pa(t_stack *stack)
+void	pa(t_stack stack)
 {
 	int	c;
 	int	num;
 	int	end;
 
-	num = stack->bstack[0];
-	end = ft_end(stack->bstack);
+	num = stack.bstack[0];
+	end = stack.max_b;
 	c = end;
 	while (end < 0)
 	{
-		stack->bstack[end - 1] = stack->bstack[end];
+		stack.bstack[end - 1] = stack.bstack[end];
 		end--;
 	}
-	stack->bstack[c] = 0;
-	c = ft_endstack(stack->astack);
+	stack.max_b--;
+	c = stack.max_a;
 	while (c != 0)
 	{
-		stack->astack[c] = stack->astack[c - 1];
+		stack.astack[c] = stack.astack[c - 1];
 		c--;
 	}
-	stack->astack[0] = num;
-	stack->astack[ft_endstack(stack->astack)] = 0;
+	stack.astack[0] = num;
+	stack.max_a++;
+	write(1, "pa \n", 5);
 }
 
-void	pb(t_stack *stack)
+void	pb(t_stack stack)
 {
 	int	c;
 	int	num;
 	int	end;
 
-	num = stack->astack[0];
-	end = ft_end(stack->astack);
+	num = stack.astack[0];
+	end = stack.max_a;
 	c = end;
 	while (end < 0)
 	{
-		stack->astack[end - 1] = stack->astack[end];
+		stack.astack[end - 1] = stack.astack[end];
 		end--;
 	}
-	stack->astack[c] = 0;
-	c = ft_endstack(stack->bstack);
+	stack.max_a--;
+	c = stack.max_b;
 	while (c != 0)
 	{
-		stack->bstack[c] = stack->bstack[c - 1];
+		stack.bstack[c] = stack.bstack[c - 1];
 		c--;
 	}
-	stack->bstack[0] = num;
-	stack->bstack[ft_endstack(stack->bstack)] = 0;
+	stack.bstack[0] = num;
+	stack.max_b++;
+	write(1, "pb \n", 5);
 }
