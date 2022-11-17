@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 16:18:20 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:52:00 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	init(t_stack *stack, char *argv[])
 		stack->astack[c - 1] = ft_atoi(argv[c]);
 		c++;
 	}
-	printf("%d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2]);
+	printf("%d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3]);
 	stack->max_b = 0;
 	stack->max_a = stack->size - 1;
 }
@@ -40,8 +40,8 @@ void	shortsort(t_stack *stack)
 		sort2(*stack);
 	if (stack->size == 3)
 		sort3(*stack);
-	// if (stack->size == 4)
-	// 	sort4();
+	if (stack->size == 4)
+		sort4(*stack);
 	// if (stack->size == 5)
 	// 	sort5();
 }
@@ -54,5 +54,5 @@ int	main(int argc, char *argv[])
 	init(&stack, argv);
 	if (argc >= 2 && argc <= 5)
 		shortsort(&stack);
-	printf("%d %d %d", stack.astack[0], stack.astack[1], stack.astack[2]);
+	printf("%d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
 }

@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:47 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/10 13:29:43 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:33:32 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ void	ra(t_stack stack)
 	c = 1;
 	end = stack.max_a;
 	num = stack.astack[0];
-	while (c != end)
+	while (c != end + 1)
 	{
 		stack.astack[c - 1] = stack.astack[c];
 		c++;
 	}
-	stack.astack[c - 1] = num;
+	stack.astack[end] = num;
 	write(1, "ra\n", 4);
 }
 
