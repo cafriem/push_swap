@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:33:14 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/10 13:30:07 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 20:19:40 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ void	pa(t_stack stack)
 	int	num;
 	int	end;
 
-	num = stack.bstack[0];
+	c = 1;
 	end = stack.max_b;
-	c = end;
-	while (end < 0)
+	num = stack.bstack[0];
+	while (c != end + 1)
 	{
-		stack.bstack[end - 1] = stack.bstack[end];
-		end--;
+		stack.astack[c - 1] = stack.astack[c];
+		c++;
 	}
+	stack.bstack[end] = num;
 	stack.max_b--;
 	c = stack.max_a;
 	while (c != 0)
@@ -44,14 +45,15 @@ void	pb(t_stack stack)
 	int	num;
 	int	end;
 
-	num = stack.astack[0];
+	c = 1;
 	end = stack.max_a;
-	c = end;
-	while (end < 0)
+	num = stack.astack[0];
+	while (c != end + 1)
 	{
-		stack.astack[end - 1] = stack.astack[end];
-		end--;
+		stack.astack[c - 1] = stack.astack[c];
+		c++;
 	}
+	stack.astack[end] = num;
 	stack.max_a--;
 	c = stack.max_b;
 	while (c != 0)

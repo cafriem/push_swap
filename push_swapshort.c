@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:28:15 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 18:19:15 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 20:16:12 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,10 @@ void	sort4(t_stack stack)
 		if (stack.astack[1] == stack.min)
 			sa(stack);
 		pb(stack);
-		printf("before = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
+		// printf("before = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
 		sort3(stack);
-		printf("after = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
+		// printf("after = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
 		pa(stack);
 	}
+	stack.max = 99;
 }
