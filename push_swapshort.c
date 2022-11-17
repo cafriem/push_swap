@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:28:15 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 16:47:46 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 18:19:15 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,19 @@ void	sort3(t_stack stack)
 
 void	sort4(t_stack stack)
 {
-	if (stack.astack[0] > stack.astack[1])
+	if (stack.astack[0] == stack.min || stack.astack[1] == stack.min
+		|| stack.astack[2] == stack.min)
 	{
-		if (stack.astack[0] > stack.astack[2]
-			&& stack.astack[0] < stack.astack[3])
-		{
+		if (stack.astack[3] == stack.min)
 			rra(stack);
+		if (stack.astack[2] == stack.min)
+			ra(stack);
+		if (stack.astack[1] == stack.min)
 			sa(stack);
-			ra(stack);
-			ra(stack);
-			if (stack.astack[0] > stack.astack[1])
-				sa(stack);
-		}
+		pb(stack);
+		printf("before = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
+		sort3(stack);
+		printf("after = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
+		pa(stack);
 	}
 }
-
-//3 1 2 4
-//3 2 1 4

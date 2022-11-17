@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:31 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 16:35:02 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:53:08 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct p_stack
 	int	b_size;
 	int	max_a;
 	int	max_b;
+	int	min;
+	int	max;
 }	t_stack;
 
 int		main(int argc, char *argv[]);
