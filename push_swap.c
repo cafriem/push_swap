@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/10/31 15:48:15 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:18:20 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ void	init(t_stack *stack, char *argv[])
 	if (stack->size <= 1)
 	{
 		write(1, "Error : Nothing to sort", 25);
-		exit(0);
+		exit(1);
 	}
-	stack->astack = ft_calloc(stack->size + 1, sizeof(int));
-	stack->bstack = ft_calloc(stack->size + 1, sizeof(int));
-	c = 0;
-	while (c < stack->size)
+	stack->astack = ft_calloc(stack->size, sizeof(int));
+	stack->bstack = ft_calloc(stack->size, sizeof(int));
+	c = 1;
+	while (c < stack->size + 1)
 	{
-		stack->astack[c] = ft_atoi(argv[c]);
+		stack->astack[c - 1] = ft_atoi(argv[c]);
 		c++;
 	}
-	printf("%d %d %d", stack->astack[0], stack->astack[1], stack->astack[2]);
+	printf("%d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2]);
 	stack->max_b = 0;
-	stack->max_a = stack->size;
+	stack->max_a = stack->size - 1;
 }
 
 void	shortsort(t_stack *stack)
@@ -50,8 +50,9 @@ int	main(int argc, char *argv[])
 {
 	t_stack	stack;
 
-	stack.size = argc;
+	stack.size = argc - 1;
 	init(&stack, argv);
 	if (argc >= 2 && argc <= 5)
 		shortsort(&stack);
+	printf("%d %d %d", stack.astack[0], stack.astack[1], stack.astack[2]);
 }
