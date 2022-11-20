@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:31 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 16:53:08 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:59:04 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,24 @@ int		main(int argc, char *argv[]);
 void	init(t_stack *stack, char *argv[]);
 //
 void	shortsort(t_stack *stack);
-void	sort2(t_stack stack);
-void	sort3(t_stack stack);
-void	sort4(t_stack stack);
+void	sort2(t_stack *stack);
+void	sort3(t_stack *stack);
+void	sort4(t_stack *stack);
+void	sort5(t_stack *stack);
 //
-void	sa(t_stack stack);
+void	sa(t_stack *stack);
 void	sb(t_stack stack);
 void	ss(t_stack stack);
 //
-void	ra(t_stack stack);
+void	ra(t_stack *stack);
 void	rb(t_stack stack);
 void	rr(t_stack stack);
 //
-void	rra(t_stack stack);
+void	rra(t_stack *stack);
 void	rrb(t_stack stack);
 void	rrr(t_stack stack);
 //
-void	pa(t_stack stack);
-void	pb(t_stack stack);
+void	pa(t_stack *stack);
+void	pb(t_stack *stack);
 
 #endif

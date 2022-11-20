@@ -6,27 +6,27 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:47 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 16:33:32 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/17 20:25:54 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack stack)
+void	ra(t_stack *stack)
 {
 	int	num;
 	int	end;
 	int	c;
 
 	c = 1;
-	end = stack.max_a;
-	num = stack.astack[0];
+	end = stack->max_a;
+	num = stack->astack[0];
 	while (c != end + 1)
 	{
-		stack.astack[c - 1] = stack.astack[c];
+		stack->astack[c - 1] = stack->astack[c];
 		c++;
 	}
-	stack.astack[end] = num;
+	stack->astack[end] = num;
 	write(1, "ra\n", 4);
 }
 

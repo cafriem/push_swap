@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 20:17:34 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:59:02 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,19 @@ void	init(t_stack *stack, char *argv[])
 	}
 	stack->max_b = 0;
 	stack->max_a = stack->size - 1;
-	printf("%d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3]);
+	printf("%d %d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3], stack->astack[4]);
 }
 
 void	shortsort(t_stack *stack)
 {
 	if (stack->size == 2)
-		sort2(*stack);
+		sort2(stack);
 	if (stack->size == 3)
-		sort3(*stack);
+		sort3(stack);
 	if (stack->size == 4)
-		sort4(*stack);
-	// if (stack->size == 5)
-	// 	sort5();
+		sort4(stack);
+	if (stack->size == 5)
+		sort5(stack);
 }
 
 int	main(int argc, char *argv[])
@@ -56,11 +56,11 @@ int	main(int argc, char *argv[])
 	stack.size = argc - 1;
 	if (stack.size <= 1)
 	{
-		write(1, "Error : Nothing to sort", 25);
+		write(1, "Error : Nothing to sort", 24);
 		exit(1);
 	}
 	init(&stack, argv);
-	if (argc >= 2 && argc <= 5)
+	if (argc >= 2 && argc <= 6)
 		shortsort(&stack);
-	printf("%d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);
+	printf("%d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4]);
 }
