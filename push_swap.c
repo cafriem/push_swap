@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/21 15:42:22 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/21 17:58:25 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,23 @@ void	init(t_stack *stack, char *argv[])
 	printf("%d %d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3], stack->astack[4]);
 }
 
+void	init2(t_stack)
+{
+	int	c;
+
+	c = 0;
+	if (stack->astack[c] != stack->min)
+		stack->min2 = stack->astack[c];
+	else
+		stack->min2 = stack->astack[c + 1];
+	while (c < stack->max_a)
+	{
+		if (stack->astack[c] != stack->min && stack->astack[c] < stack->min2)
+			stack->min2 = stack->astack[c];
+		c++;
+	}
+}
+
 void	shortsort(t_stack *stack)
 {
 	if (stack->size == 2)
@@ -47,6 +64,12 @@ void	shortsort(t_stack *stack)
 		sort4(stack);
 	if (stack->size == 5)
 		sort5(stack);
+}
+
+void	longsort(t_stack *stack)
+{
+	if (argc > 6 && argc <= 100)
+		sort100(&stack);
 }
 
 int	main(int argc, char *argv[])
@@ -62,5 +85,7 @@ int	main(int argc, char *argv[])
 	init(&stack, argv);
 	if (argc >= 2 && argc <= 6)
 		shortsort(&stack);
+	if (argc > 6)
+		longsort(&stack);
 	printf("%d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4]);
 }

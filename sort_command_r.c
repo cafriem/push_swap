@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:47 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 20:25:54 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/21 17:43:13 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,21 @@ void	ra(t_stack *stack)
 	write(1, "ra\n", 4);
 }
 
-void	rb(t_stack stack)
+void	rb(t_stack *stack)
 {
 	int	num;
 	int	end;
 	int	c;
 
 	c = 1;
-	end = stack.max_b;
-	num = stack.bstack[0];
+	end = stack->max_b;
+	num = stack->bstack[0];
 	while (c != end)
 	{
-		stack.bstack[c - 1] = stack.bstack[c];
+		stack->bstack[c - 1] = stack->bstack[c];
 		c++;
 	}
-	stack.bstack[c - 1] = num;
+	stack->bstack[c - 1] = num;
 	write(1, "rb\n", 4);
 }
 

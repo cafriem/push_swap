@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:28:15 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/21 15:30:28 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/21 17:58:34 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,12 @@ void	sort5(t_stack *stack)
 		min2 = stack->astack[c];
 	else
 		min2 = stack->astack[c + 1];
-	printf("%d\n", stack->min);
 	while (c < stack->max_a)
 	{
 		if (stack->astack[c] != stack->min && stack->astack[c] < min2)
 			min2 = stack->astack[c];
 		c++;
 	}
-	printf("%d\n", min2);
 	if (stack->astack[2] == stack->min)
 		ra(stack);
 	if (stack->astack[1] == stack->min)
