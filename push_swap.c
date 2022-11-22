@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/21 17:58:25 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/22 15:38:58 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	init(t_stack *stack, char *argv[])
 	printf("%d %d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3], stack->astack[4]);
 }
 
-void	init2(t_stack)
+void	init2(t_stack *stack)
 {
 	int	c;
 
@@ -68,8 +68,8 @@ void	shortsort(t_stack *stack)
 
 void	longsort(t_stack *stack)
 {
-	if (argc > 6 && argc <= 100)
-		sort100(&stack);
+	if (stack->size > 6 && stack->size <= 100)
+		sort100(stack);
 }
 
 int	main(int argc, char *argv[])

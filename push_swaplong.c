@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_command_100.c                                 :+:      :+:    :+:   */
+/*   push_swaplong.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:35:55 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/21 17:55:23 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/22 15:53:37 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	sort100(t_stack *stack)
 {
-	int	chunk_size;
-	int	mid;
 	int	c;
 
-	chunk_size = abs(stack->size / 5);
-	mid = abs(stack->size / 2);
-	
+	stack->chunk_size = abs(stack->size / 5);
+	stack->mid = abs(stack->size / 2);
+	c = 0;
 }

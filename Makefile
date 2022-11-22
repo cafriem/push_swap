@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 SRCS =	push_swap.c			\
 		push_swapshort.c	\
+		push_swaplong.c		\
 		sort_command_p.c	\
 		sort_command_r.c	\
 		sort_command_rr.c	\
