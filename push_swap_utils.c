@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/22 17:42:03 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/24 14:41:57 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	minandmin2(t_stack *stack)
 {
-	int	c;
-	int	min2;
-
 	stack->minlocation = 0;
-	stack->min = stack->astack[c];
+	stack->min = stack->astack[stack->minlocation];
 	while (stack->minlocation < stack->max_a)
 	{
 		if (stack->astack[stack->minlocation] < stack->min)
@@ -27,6 +24,7 @@ void	minandmin2(t_stack *stack)
 	}
 	stack->minlocation--;
 	stack->min2location = 0;
+	stack->min2 = 0;
 	if (stack->astack[0] != stack->min)
 		stack->min2 = stack->astack[0];
 	else
@@ -43,10 +41,24 @@ void	minandmin2(t_stack *stack)
 
 void	close_checker(t_stack *stack)
 {
-	int	a;
-	int	b;
+	int	c1;
+	int	c2;
 
-	if (stack->minlocation / 2)
-		a = stack->minlocation;
-	b = stack->min2location;
+	stack->sort = ft_calloc(stack->size, sizeof(int));
+	stack->sort[0] = stack->min;
+	stack->sort[1] = stack->min2;
+	c1 = 2;
+	while (c1 < stack->max_a)
+	{
+		c2 = 0;
+		stack->sort[c1] = stack->max;
+		while (c2 != stack->max_a)
+		{
+			if (stack->astack[c2] < stack->sort[c1]
+				&& stack->astack[c2] > stack->sort[c1 - 1])
+				stack->sort[c1] = stack->astack[c2];
+			c2++;
+		}
+		c1++;
+	}
 }

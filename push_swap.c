@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/22 15:38:58 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/24 14:16:44 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	shortsort(t_stack *stack)
 
 void	longsort(t_stack *stack)
 {
-	if (stack->size > 6 && stack->size <= 100)
+	if (stack->size > 6 && stack->size < 101)
 		sort100(stack);
 }
 
