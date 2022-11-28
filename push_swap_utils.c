@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/25 12:02:19 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/28 12:52:47 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,18 @@ void	close_checker(t_stack *stack)
 		}
 		c1++;
 	}
+}
+
+int	stack_check(t_stack *stack, int chunk)
+{
+	int	c;
+
+	c = 0;
+	while (c < chunk)
+	{
+		if (stack->sort[c] == stack->astack[0])
+			return (1);
+		c++;
+	}
+	return (-1);
 }

@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/24 14:16:44 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/11/28 14:37:11 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ int	main(int argc, char *argv[])
 		exit(1);
 	}
 	init(&stack, argv);
-	if (argc >= 2 && argc <= 6)
-		shortsort(&stack);
-	if (argc > 6)
+	// if (argc >= 2 && argc <= 6)
+	// 	shortsort(&stack);
+	// if (argc > 6)
 		longsort(&stack);
-	printf("%d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4]);
+	// printf("%d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4]);
 }
