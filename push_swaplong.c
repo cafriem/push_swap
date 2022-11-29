@@ -18,13 +18,14 @@ void	sort100(t_stack *stack)
 	int	chunk;
 
 	c = 0;
-	stack->chunk_size = abs(stack->size / 5);
-	stack->mid = abs(stack->size / 2);
+	stack->chunk_size = (stack->size / 5);
+	stack->mid = (stack->size / 2);
 	minandmin2(stack);
 	close_checker(stack);
 	chunk = stack->chunk_size;
-	while (c < stack->size)
+	while (c < stack->size && stack->max_a > 0)
 	{
+		printf("c = %d num = %d chunk = %d\n", stack->max_a, stack->astack[0], chunk);
 		if (c == chunk)
 			chunk += stack->chunk_size;
 		if (stack_check(stack, chunk) == 1)
@@ -32,8 +33,8 @@ void	sort100(t_stack *stack)
 			pb(stack);
 			c++;
 		}
-		if (stack_check(stack, chunk) == -1)
-			rra(stack);
+		else if (stack_check(stack, chunk) == -1)
+			ra(stack);
 	}
-	printf("%d %d %d %d %d", stack->bstack[3],stack->bstack[4],stack->bstack[5],stack->bstack[6],stack->bstack[7]);
+	printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
 }
