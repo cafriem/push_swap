@@ -77,6 +77,7 @@ int	main(int argc, char *argv[])
 	t_stack	stack;
 
 	stack.size = argc - 1;
+	printf("size = %d\n", stack.size);
 	if (stack.size <= 1)
 	{
 		write(1, "Error : Nothing to sort", 24);

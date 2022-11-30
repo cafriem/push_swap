@@ -76,3 +76,26 @@ int	stack_check(t_stack *stack, int chunk)
 	}
 	return (-1);
 }
+
+void	lchunker(t_stack *stack, int chunk, int bstart)
+{
+	int	chunkamount;
+	int	c;
+
+	c = 0;
+	chunkamount = chunk - stack->chunk_size;
+	//chunkamount = 15
+	//bstart = 19
+	stack->max_a = 1;
+	while (bstart > chunkamount)
+	{
+		stack->max = stack->sort[bstart];
+		bstart--;
+		if (bstart > chunkamount)
+		{
+			stack->max2 = stack->sort[bstart - 1];
+			bstart--;
+		}
+		while (bstart)
+	}
+}

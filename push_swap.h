@@ -34,6 +34,7 @@ typedef struct p_stack
 	int	min;
 	int	min2;
 	int	max;
+	int	max2;
 	int	minlocation;
 	int	min2location;
 }	t_stack;
@@ -43,6 +44,7 @@ void	init(t_stack *stack, char *argv[]);
 void	minandmin2(t_stack *stack);
 void	close_checker(t_stack *stack);
 int		stack_check(t_stack *stack, int chunk);
+void	lchunker(t_stack *stack, int chunk, int bstart);
 //
 void	longsort(t_stack *stack);
 void	sort100(t_stack *stack);
@@ -64,6 +66,5 @@ void	rrb(t_stack stack);
 void	rrr(t_stack stack);
 void	pa(t_stack *stack);
 void	pb(t_stack *stack);
-//
 
 #endif

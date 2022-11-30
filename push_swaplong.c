@@ -23,9 +23,9 @@ void	sort100(t_stack *stack)
 	minandmin2(stack);
 	close_checker(stack);
 	chunk = stack->chunk_size;
-	while (c < stack->size && stack->max_a > 0)
+	while (c < stack->size && stack->max_a != 0)
 	{
-		printf("c = %d num = %d chunk = %d\n", stack->max_a, stack->astack[0], chunk);
+		printf("size = %d num = %d chunk = %d\n", stack->size, stack->astack[0], chunk);
 		if (c == chunk)
 			chunk += stack->chunk_size;
 		if (stack_check(stack, chunk) == 1)
@@ -35,6 +35,8 @@ void	sort100(t_stack *stack)
 		}
 		else if (stack_check(stack, chunk) == -1)
 			ra(stack);
+		printf("c = %d\n", c);
 	}
 	printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
+	lchunker(stack, chunk, c);
 }
