@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/28 12:52:47 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/06 14:32:42 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ void	lchunker(t_stack *stack, int chunk, int bstart)
 {
 	int	chunkamount;
 	int	c;
+	int	sendback;
 
-	c = 0;
 	chunkamount = chunk - stack->chunk_size;
 	//chunkamount = 15
 	//bstart = 19
@@ -95,6 +95,14 @@ void	lchunker(t_stack *stack, int chunk, int bstart)
 		{
 			stack->max2 = stack->sort[bstart - 1];
 			bstart--;
+		}
+		c = 0;
+		while()
+		{
+			if (stack->bstack[c] == stack->max
+				|| stack->bstack[c] == stack->max)
+				pa(stack;)
+			c++;
 		}
 	}
 }
