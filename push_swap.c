@@ -84,9 +84,9 @@ int	main(int argc, char *argv[])
 		exit(1);
 	}
 	init(&stack, argv);
-	if (argc >= 2 && argc <= 6)
-		shortsort(&stack);
-	if (argc > 6)
+	// if (argc >= 2 && argc <= 6)
+	// 	shortsort(&stack);
+	// if (argc > 6)
 		longsort(&stack);
 	// printf("%d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4]);
 }

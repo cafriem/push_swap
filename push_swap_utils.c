@@ -96,6 +96,5 @@ void	lchunker(t_stack *stack, int chunk, int bstart)
 			stack->max2 = stack->sort[bstart - 1];
 			bstart--;
 		}
-		while (bstart)
 	}
 }

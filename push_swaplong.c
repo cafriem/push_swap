@@ -38,5 +38,10 @@ void	sort100(t_stack *stack)
 		printf("c = %d\n", c);
 	}
 	printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
-	lchunker(stack, chunk, c);
+	while (c != 0)
+	{
+		lchunker(stack, chunk, c);
+		
+	}
+	pb;
 }
