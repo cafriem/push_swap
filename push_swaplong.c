@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:35:55 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 13:21:43 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/10 14:32:00 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	sort100(t_stack *stack)
 {
 	int	c;
-	// int	ch;
 	int	chunk;
 
 	c = 0;
@@ -26,7 +25,6 @@ void	sort100(t_stack *stack)
 	chunk = stack->chunk_size;
 	while (c < stack->size && stack->max_a != 0)
 	{
-		// printf("size = %d num = %d chunk = %d\n", stack->size, stack->astack[0], chunk);
 		if (c == chunk)
 			chunk += stack->chunk_size;
 		if (stack_check(stack, chunk) == 1)
@@ -36,19 +34,7 @@ void	sort100(t_stack *stack)
 		}
 		else if (stack_check(stack, chunk) == -1)
 			ra(stack);
-		// printf("c = %d\n", c);
 	}
-//
-	// ch = chunk - stack->chunk_size;
-	// while (c != 0)
-	// {
-	// 	while (c >= ch)
-	// 	{
-	// 		lchunker(stack, chunk, c);
-	// 	}
-	// 	ch -= stack->chunk_size;
-	// }
-	// pb(stack);
 }
 
 // python3 python_visualizer.py `ruby -e "puts (0..50).to_a.shuffle.join(' ')"`

@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/17 20:24:37 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/10 14:15:22 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	rra(t_stack *stack)
 		c--;
 	}
 	stack->astack[0] = num;
-	write(1, "rra\n", 5);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack *stack)
@@ -41,7 +41,7 @@ void	rrb(t_stack *stack)
 		c--;
 	}
 	stack->bstack[0] = num;
-	write(1, "rrb\n", 5);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack stack)
@@ -65,5 +65,5 @@ void	rrr(t_stack stack)
 		c--;
 	}
 	stack.bstack[0] = num;
-	write(1, "rrr\n", 5);
+	write(1, "rrr\n", 4);
 }
