@@ -28,19 +28,19 @@ void	rra(t_stack *stack)
 	write(1, "rra\n", 5);
 }
 
-void	rrb(t_stack stack)
+void	rrb(t_stack *stack)
 {
 	int	num;
 	int	c;
 
-	c = stack.max_b;
-	num = stack.bstack[c];
+	c = stack->max_b;
+	num = stack->bstack[c];
 	while (c != 0)
 	{
-		stack.bstack[c] = stack.bstack[c - 1];
+		stack->bstack[c] = stack->bstack[c - 1];
 		c--;
 	}
-	stack.bstack[0] = num;
+	stack->bstack[0] = num;
 	write(1, "rrb\n", 5);
 }
 

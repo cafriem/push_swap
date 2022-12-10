@@ -37,11 +37,8 @@ void	sort100(t_stack *stack)
 			ra(stack);
 		printf("c = %d\n", c);
 	}
-	printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
-	while (c != 0)
-	{
-		lchunker(stack, chunk, c);
-		
-	}
-	pb;
+	// printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
+	// while (c > chunk - stack->chunk_size)
+	// 	lchunker(stack, chunk, c);
+	// pb;
 }

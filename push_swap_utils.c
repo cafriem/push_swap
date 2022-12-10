@@ -77,24 +77,50 @@ int	stack_check(t_stack *stack, int chunk)
 	return (-1);
 }
 
-void	lchunker(t_stack *stack, int chunk, int bstart)
-{
-	int	chunkamount;
-	int	c;
+// void	lchunker(t_stack *stack, int chunk, int bstart)
+// {
+// 	int	chunkamount;
+// 	int	start;
+// 	int	count;
+// 	// int	end;
+// 	int	c;
 
-	c = 0;
-	chunkamount = chunk - stack->chunk_size;
-	//chunkamount = 15
-	//bstart = 19
-	stack->max_a = 1;
-	while (bstart > chunkamount)
-	{
-		stack->max = stack->sort[bstart];
-		bstart--;
-		if (bstart > chunkamount)
-		{
-			stack->max2 = stack->sort[bstart - 1];
-			bstart--;
-		}
-	}
-}
+// 	chunkamount = chunk - stack->chunk_size;
+// 	// end = bstart;
+// 	//chunkamount = 15
+// 	//bstart = 19
+// 	stack->max_a = 1;
+// 	if (bstart > chunkamount)
+// 	{
+// 		stack->max = stack->sort[bstart];
+// 		bstart--;
+// 		if (bstart > chunkamount)
+// 		{
+// 			stack->max2 = stack->sort[bstart - 1];
+// 			bstart--;
+// 		}
+// 	}
+// 	c = 0;
+// 	start = 0;
+// 	count = 0;
+// 	while (count != 2)
+// 	{
+// 		if (stack->max == stack->bstack[start]
+// 			|| (stack->max2 == stack->bstack[start] && stack->max2 < stack->max2))
+// 		{
+// 			pb(stack);
+// 			count++;
+// 		}
+// 		else
+// 		{
+// 			rb(stack);
+// 			c++;
+// 		}
+// 		start++;
+// 	}
+// 	while (c > 0)
+// 	{
+// 		rrb(stack);
+// 		c--;
+// 	}
+// }
