@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/28 14:37:11 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/10 13:22:29 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	init(t_stack *stack, char *argv[])
 	}
 	stack->max_b = 0;
 	stack->max_a = stack->size - 1;
-	printf("%d %d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3], stack->astack[4]);
+	// printf("%d %d %d %d %d\n", stack->astack[0], stack->astack[1], stack->astack[2], stack->astack[3], stack->astack[4]);
 }
 
 void	init2(t_stack *stack)
@@ -77,7 +77,7 @@ int	main(int argc, char *argv[])
 	t_stack	stack;
 
 	stack.size = argc - 1;
-	printf("size = %d\n", stack.size);
+	// printf("size = %d\n", stack.size);
 	if (stack.size <= 1)
 	{
 		write(1, "Error : Nothing to sort", 24);

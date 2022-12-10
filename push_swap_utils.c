@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 13:16:36 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/10 13:20:24 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,50 +77,50 @@ int	stack_check(t_stack *stack, int chunk)
 	return (-1);
 }
 
-void	lchunker(t_stack *stack, int chunk, int bstart)
-{
-	int	chunkamount;
-	int	start;
-	int	count;
-	// int	end;
-	int	c;
+// void	lchunker(t_stack *stack, int chunk, int bstart)
+// {
+// 	int	chunkamount;
+// 	int	start;
+// 	int	count;
+// 	// int	end;
+// 	int	c;
 
-	chunkamount = chunk - stack->chunk_size;
-	// end = bstart;
-	//chunkamount = 15
-	//bstart = 19
-	stack->max_a = 1;
-	if (bstart > chunkamount)
-	{
-		stack->max = stack->sort[bstart];
-		bstart--;
-		if (bstart > chunkamount)
-		{
-			stack->max2 = stack->sort[bstart - 1];
-			bstart--;
-		}
-	}
-	c = 0;
-	start = 0;
-	count = 0;
-	while (count != 2)
-	{
-		if (stack->max == stack->bstack[start]
-			|| (stack->max2 == stack->bstack[start] && stack->max < stack->max2))
-		{
-			pb(stack);
-			count++;
-		}
-		else
-		{
-			rb(stack);
-			c++;
-		}
-		start++;
-	}
-	while (c > 0)
-	{
-		rrb(stack);
-		c--;
-	}
-}
+// 	chunkamount = chunk - stack->chunk_size;
+// 	// end = bstart;
+// 	//chunkamount = 15
+// 	//bstart = 19
+// 	stack->max_a = 1;
+// 	if (bstart > chunkamount)
+// 	{
+// 		stack->max = stack->sort[bstart];
+// 		bstart--;
+// 		if (bstart > chunkamount)
+// 		{
+// 			stack->max2 = stack->sort[bstart - 1];
+// 			bstart--;
+// 		}
+// 	}
+// 	c = 0;
+// 	start = 0;
+// 	count = 0;
+// 	while (count != 2)
+// 	{
+// 		if (stack->max == stack->bstack[start]
+// 			|| (stack->max2 == stack->bstack[start] && stack->max < stack->max2))
+// 		{
+// 			pb(stack);
+// 			count++;
+// 		}
+// 		else
+// 		{
+// 			rb(stack);
+// 			c++;
+// 		}
+// 		start++;
+// 	}
+// 	while (c > 0)
+// 	{
+// 		rrb(stack);
+// 		c--;
+// 	}
+// }
