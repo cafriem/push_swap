@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:35:55 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/28 14:47:23 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/06 14:21:57 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	sort100(t_stack *stack)
 {
 	int	c;
+	int	ch;
 	int	chunk;
 
 	c = 0;
@@ -37,8 +38,15 @@ void	sort100(t_stack *stack)
 			ra(stack);
 		printf("c = %d\n", c);
 	}
-	// printf("%d %d %d %d %d", stack->bstack[0],stack->bstack[1],stack->bstack[2],stack->bstack[3],stack->bstack[4]);
-	// while (c > chunk - stack->chunk_size)
-	// 	lchunker(stack, chunk, c);
-	// pb;
-}
+//
+// 	ch = chunk - stack->chunk_size;
+// 	while (c != 0)
+// 	{
+// 		while (c >= ch)
+// 		{
+// 			lchunker(stack, chunk, c);
+// 		}
+// 		ch -= stack->chunk_size;
+// 	}
+// 	pb(stack);
+// }
