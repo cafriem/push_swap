@@ -50,3 +50,5 @@ void	sort100(t_stack *stack)
 	}
 	pb(stack);
 }
+
+// python3 python_visualizer.py `ruby -e "puts (0..50).to_a.shuffle.join(' ')"`
