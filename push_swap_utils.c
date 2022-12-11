@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 14:33:03 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:46:02 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,11 @@ int	stack_check(t_stack *stack, int chunk)
 		c++;
 	}
 	return (-1);
+}
+
+void	rsort(t_stack *stack)
+{
+	
 }
 
 // void	lchunker(t_stack *stack, int chunk, int bstart)
