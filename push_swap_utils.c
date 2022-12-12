@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 15:46:02 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/12 17:59:23 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,60 @@ int	stack_check(t_stack *stack, int chunk)
 	return (-1);
 }
 
-void	rsort(t_stack *stack)
+void	findersort(t_stack *stack, int num)
 {
-	
+	int	c;
+	int	sort;
+
+	c = 0;
+	sort = stack->sort[num];
+	printf("sort = %d\n", sort);
+	// printf("%d\n", num);
+	while (sort != stack->bstack[c] && stack->max_b != c)
+		c++;
+	printf("b stack = %d\n", stack->bstack[c]);
+	printf("c = %d\n", c);
+	if (c < 0)
+		c *= -1;
+	if (c > stack->max_b / 2)
+		larger(stack, c);
+	if (c <= stack->max_b / 2)
+		smaller(stack, c);
+}
+
+// c = position of sort
+
+void	larger(t_stack *stack, int c)
+{
+	int	counter;
+
+	// printf("before c = %d\n", c);
+	c = (stack->max_b - c);
+	// printf("max = %d\n", stack->max_b);
+	// printf("c = %d\n", c);
+	counter = 0;
+	while (counter != c)
+	{
+		rrb(stack);
+		counter++;
+	}
+	printf("rrb = %d\n", stack->bstack[0]);
+	pa(stack);
+}
+
+void	smaller(t_stack *stack, int c)
+{
+	int	counter;
+
+	// printf("before c = %d\n", c);
+	counter = 0;
+	while (counter != c)
+	{
+		rb(stack);
+		counter++;
+	}
+	printf("rb = %d\n", stack->bstack[0]);
+	pa(stack);
 }
 
 // void	lchunker(t_stack *stack, int chunk, int bstart)

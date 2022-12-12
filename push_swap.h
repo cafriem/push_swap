@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:31 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 15:11:05 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:28:05 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ void	init(t_stack *stack, char *argv[]);
 void	minandmin2(t_stack *stack);
 void	close_checker(t_stack *stack);
 int		stack_check(t_stack *stack, int chunk);
+void	findersort(t_stack *stack, int num);
+void	larger(t_stack *stack, int c);
+void	smaller(t_stack *stack, int c);
 // void	lchunker(t_stack *stack, int chunk, int bstart);
 //
 void	longsort(t_stack *stack);

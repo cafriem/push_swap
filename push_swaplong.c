@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:35:55 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 15:45:33 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:28:06 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ void	sort100(t_stack *stack)
 		else if (stack_check(stack, chunk) == -1)
 			ra(stack);
 	}
-	rsort(stack);
+	while (stack->max_b != 0)
+	{
+		c--;
+		findersort(stack, c);
+	}
 }
 
 // python3 python_visualizer.py `ruby -e "puts (0..50).to_a.shuffle.join(' ')"`
