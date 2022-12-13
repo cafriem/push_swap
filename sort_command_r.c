@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:47 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 14:24:18 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 15:25:53 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	rb(t_stack *stack)
 	c = 1;
 	end = stack->max_b - 1;
 	num = stack->bstack[0];
-	while (c != end)
+	while (c <= end)
 	{
 		stack->bstack[c - 1] = stack->bstack[c];
 		c++;

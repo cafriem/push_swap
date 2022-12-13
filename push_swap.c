@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/12 16:28:03 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 16:50:25 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,10 @@ void	shortsort(t_stack *stack)
 
 void	longsort(t_stack *stack)
 {
-	if (stack->size > 6 && stack->size < 101)
+	if (stack->size > 6 && stack->size < 700)
 		sort100(stack);
+	else
+		sort500(stack);
 }
 
 int	main(int argc, char *argv[])
@@ -76,7 +78,6 @@ int	main(int argc, char *argv[])
 	t_stack	stack;
 
 	stack.size = argc - 1;
-	// printf("size = %d\n", stack.size);
 	if (stack.size <= 1)
 	{
 		write(1, "Error : Nothing to sort", 24);
@@ -87,5 +88,5 @@ int	main(int argc, char *argv[])
 		shortsort(&stack);
 	if (argc > 6)
 		longsort(&stack);
-	printf("%d %d %d %d %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3], stack.astack[4], stack.astack[5], stack.astack[6], stack.astack[7]);
+	freeall(&stack);
 }

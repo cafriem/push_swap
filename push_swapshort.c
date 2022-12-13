@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:28:15 by cafriem           #+#    #+#             */
-/*   Updated: 2022/11/21 17:58:34 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 16:48:31 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ void	sort5(t_stack *stack)
 		ra(stack);
 	if (stack->astack[3] == stack->min)
 		rra(stack);
+	sort52(stack, min2);
+}
+
+void	sort52(t_stack *stack, int min2)
+{
 	if (stack->astack[4] == stack->min)
 		rra(stack);
 	pb(stack);
@@ -85,5 +90,3 @@ void	sort5(t_stack *stack)
 	pa(stack);
 	pa(stack);
 }
-
-// printf("before = %d %d %d %d\n", stack.astack[0], stack.astack[1], stack.astack[2], stack.astack[3]);

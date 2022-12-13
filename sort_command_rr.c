@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/10 14:15:22 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 15:18:28 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	rra(t_stack *stack)
 	int	num;
 	int	c;
 
-	c = stack->max_a;
+	c = stack->max_a - 1;
 	num = stack->astack[c];
-	while (c != 0)
+	while (c > 0)
 	{
 		stack->astack[c] = stack->astack[c - 1];
 		c--;
@@ -33,9 +33,9 @@ void	rrb(t_stack *stack)
 	int	num;
 	int	c;
 
-	c = stack->max_b;
+	c = stack->max_b - 1;
 	num = stack->bstack[c];
-	while (c != 0)
+	while (c > 0)
 	{
 		stack->bstack[c] = stack->bstack[c - 1];
 		c--;
