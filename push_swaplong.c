@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:35:55 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/12 16:28:06 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 14:00:36 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	sort100(t_stack *stack)
 			chunk += stack->chunk_size;
 		if (stack_check(stack, chunk) == 1)
 		{
+			printf("chunk = %d\nc = %d\n", chunk, c);
+			printf("send = %d\n", stack->astack[0]);
 			pb(stack);
 			c++;
 		}

@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/12 17:59:23 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/13 14:00:46 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,9 @@ void	smaller(t_stack *stack, int c)
 	pa(stack);
 }
 
+// 
+// 
+// 
 // void	lchunker(t_stack *stack, int chunk, int bstart)
 // {
 // 	int	chunkamount;
