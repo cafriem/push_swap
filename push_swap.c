@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/13 16:50:25 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/29 16:18:43 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ void	init(t_stack *stack, char *argv[])
 	int	c;
 	int	num;
 
+	if (checker(stack, argv) == 0)
+	{
+		write (1, "Error\n", 6);
+		exit (1);
+	}
 	stack->astack = ft_calloc(stack->size, sizeof(int));
 	stack->bstack = ft_calloc(stack->size, sizeof(int));
 	c = 1;
@@ -36,21 +41,24 @@ void	init(t_stack *stack, char *argv[])
 	stack->max_a = stack->size;
 }
 
-void	init2(t_stack *stack)
+int	checker(t_stack *stack, char *argv[])
 {
-	int	c;
+	int	argv_count;
+	int	stack_count;
 
-	c = 0;
-	if (stack->astack[c] != stack->min)
-		stack->min2 = stack->astack[c];
-	else
-		stack->min2 = stack->astack[c + 1];
-	while (c < stack->max_a)
+	argv_count = 0;
+	while (argv_count < stack->size)
 	{
-		if (stack->astack[c] != stack->min && stack->astack[c] < stack->min2)
-			stack->min2 = stack->astack[c];
-		c++;
+		stack_count = 0;
+		while (argv_count < stack_count)
+		{
+			if (argv[argv_count] == argv[stack_count])
+				return (0);
+			stack_count++;
+		}
+		argv_count++;
 	}
+	return (1);
 }
 
 void	shortsort(t_stack *stack)
@@ -67,7 +75,7 @@ void	shortsort(t_stack *stack)
 
 void	longsort(t_stack *stack)
 {
-	if (stack->size > 6 && stack->size < 700)
+	if (stack->size > 6 && stack->size < 250)
 		sort100(stack);
 	else
 		sort500(stack);
@@ -78,12 +86,15 @@ int	main(int argc, char *argv[])
 	t_stack	stack;
 
 	stack.size = argc - 1;
-	if (stack.size <= 1)
+	if (argv_checker(argc, argv) == 0 || stack.size <= 1)
 	{
-		write(1, "Error : Nothing to sort", 24);
+		write(2, "Error : Check stack sort", 24);
 		exit(1);
 	}
 	init(&stack, argv);
+	close_checker(&stack);
+	if (sort_checker(&stack) == 1)
+		exit(1);
 	if (argc >= 2 && argc <= 6)
 		shortsort(&stack);
 	if (argc > 6)

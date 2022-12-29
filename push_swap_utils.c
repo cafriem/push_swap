@@ -6,11 +6,45 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/13 16:39:14 by cafriem          ###   ########.fr       */
+/*   Updated: 2022/12/29 16:18:08 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	argv_checker(int argc, char *argv[])
+{
+	int	st_c;
+	int	ar_c;
+
+	st_c = 0;
+	while (argc > st_c)
+	{
+		ar_c = 0;
+		while (st_c > ar_c)
+		{
+			if (ft_atoi(argv[ar_c]) == ft_atoi(argv[st_c]))
+				return (0);
+			ar_c++;
+		}
+		st_c++;
+	}
+	return (1);
+}
+
+int	sort_checker(t_stack *stack)
+{
+	int	counter;
+
+	counter = 0;
+	while (counter < stack->size)
+	{
+		if (stack->astack[counter] != stack->sort[counter])
+			return (0);
+		counter++;
+	}
+	return (1);
+}
 
 void	minandmin2(t_stack *stack)
 {
@@ -46,8 +80,7 @@ void	close_checker(t_stack *stack)
 
 	stack->sort = ft_calloc(stack->size, sizeof(int));
 	stack->sort[0] = stack->min;
-	stack->sort[1] = stack->min2;
-	c1 = 2;
+	c1 = 1;
 	while (c1 < stack->max_a)
 	{
 		c2 = 0;
