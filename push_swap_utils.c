@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:42:03 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/29 16:18:08 by cafriem          ###   ########.fr       */
+/*   Updated: 2023/01/02 15:48:55 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	argv_checker(int argc, char *argv[])
 	int	st_c;
 	int	ar_c;
 
-	st_c = 0;
+	st_c = 1;
 	while (argc > st_c)
 	{
-		ar_c = 0;
-		while (st_c > ar_c)
+		ar_c = 1;
+		while (ar_c < st_c)
 		{
 			if (ft_atoi(argv[ar_c]) == ft_atoi(argv[st_c]))
 				return (0);

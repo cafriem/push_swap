@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/29 16:18:43 by cafriem          ###   ########.fr       */
+/*   Updated: 2023/01/02 15:45:40 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int	main(int argc, char *argv[])
 	t_stack	stack;
 
 	stack.size = argc - 1;
-	if (argv_checker(argc, argv) == 0 || stack.size <= 1)
+	if (argv_checker(argc, argv) == 0)
 	{
 		write(2, "Error : Check stack sort", 24);
 		exit(1);
