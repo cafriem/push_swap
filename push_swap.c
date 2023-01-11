@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:54 by cafriem           #+#    #+#             */
-/*   Updated: 2023/01/11 18:34:52 by cafriem          ###   ########.fr       */
+/*   Updated: 2023/01/11 18:47:03 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,5 @@ int	main(int argc, char *argv[])
 		longsort(&stack);
 	free(stack.astack);
 	free(stack.bstack);
+	free(stack->sort);
 }
