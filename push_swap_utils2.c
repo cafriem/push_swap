@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:38:38 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/13 16:40:54 by cafriem          ###   ########.fr       */
+/*   Updated: 2023/01/11 18:35:00 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,4 @@ void	smaller(t_stack *stack, int c)
 	while (stack->bstack[0] != c)
 		rb(stack);
 	pa(stack);
-}
-
-void	freeall(t_stack *stack)
-{
-	free(stack->astack);
-	free(stack->bstack);
 }

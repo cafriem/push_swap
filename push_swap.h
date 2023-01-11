@@ -6,7 +6,7 @@
 /*   By: cafriem <cafriem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:47:31 by cafriem           #+#    #+#             */
-/*   Updated: 2022/12/29 16:06:27 by cafriem          ###   ########.fr       */
+/*   Updated: 2023/01/11 18:35:02 by cafriem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ typedef struct p_stack
 }	t_stack;
 
 int		main(int argc, char *argv[]);
-int	argv_checker(int argc, char *argv[]);
+int		argv_checker(int argc, char *argv[]);
 void	init(t_stack *stack, char *argv[]);
 int		checker(t_stack *stack, char *argv[]);
 int		sort_checker(t_stack *stack);
@@ -50,7 +50,6 @@ int		stack_check(t_stack *stack, int chunk);
 void	findersort(t_stack *stack, int num);
 void	larger(t_stack *stack, int c);
 void	smaller(t_stack *stack, int c);
-void	freeall(t_stack *stack);
 //
 void	shortsort(t_stack *stack);
 void	sort2(t_stack *stack);
